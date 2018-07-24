@@ -1,0 +1,6 @@
+#wpadminbar ul#wp-admin-bar-root-default > li.zhutibaba a {
+	background: url('../img/zhutibaba-favicon.png') no-repeat left center;
+	background-size: 24px 24px;
+  	-webkit-backface-visibility: hidden;
+  	padding-left: 26px;
+}
