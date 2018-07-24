@@ -79,5 +79,15 @@
 
 <?php wp_footer(); ?>
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?11e1fcf8c087695ab66673652234e853";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 </body>
 </html>
