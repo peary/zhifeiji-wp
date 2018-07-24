@@ -227,3 +227,17 @@ function boke_1_widgets_init() {
 
 }
 add_action( 'widgets_init', 'boke_1_widgets_init' );
+
+
+//控制侧边栏标签云
+function my_tag_cloud_filter($args = array()) {
+    $args['smallest'] = 12; //最小字号
+    $args['largest'] = 20; //最大字号
+    $args['unit'] = 'px'; //字体单位 px，pt，em
+    $args['number'] = 30; //调用数量
+    $args['orderby']= 'count'; //按何值排序
+    $args['order'] = 'DESC'; //排序方式
+    //更多参数参见下面的参数说明
+    return $args;
+}
+add_filter('widget_tag_cloud_args', 'my_tag_cloud_filter', 10);
