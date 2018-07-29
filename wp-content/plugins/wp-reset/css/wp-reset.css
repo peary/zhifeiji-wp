@@ -1,0 +1,77 @@
+/**
+ * WP Reset
+ * https://wpreset.com/
+ * (c) WebFactory Ltd, 2017-2018
+ */
+
+.tools_page_wp-reset #wp_reset_form input {
+  vertical-align: middle;
+}
+
+.tools_page_wp-reset .plain-list {
+    margin-top: 5px;
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+
+.tools_page_wp-reset .plain-list li {
+  text-indent: -18px;
+  padding-left: 23px;
+  line-height: 23px;
+  margin: 0;
+}
+
+.tools_page_wp-reset .red {
+  color: #dd3036;
+}
+
+.tools_page_wp-reset .green {
+  color: #1daf1d;
+}
+
+.tools_page_wp-reset #logo-icon {
+  max-height: 30px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.tools_page_wp-reset .dismiss-notice-rate {
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+.tools_page_wp-reset .button {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.tools_page_wp-reset .swal2-container {
+  z-index: 99999;
+}
+
+.tools_page_wp-reset .swal2-container.swal2-shown {
+  background-color: rgba(0,0,0,.6);
+}
+
+.tools_page_wp-reset .swal2-popup .swal2-title {
+  line-height: 1;
+}
+
+.tools_page_wp-reset code {
+  white-space: nowrap;
+}
+
+.tools_page_wp-reset p {
+  line-height: 1.7;
+}
+
+.tools_page_wp-reset .rotating {
+  -webkit-animation:spin 1.5s linear infinite;
+  -moz-animation:spin 1.5s linear infinite;
+  animation:spin 1.5s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }

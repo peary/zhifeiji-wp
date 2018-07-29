@@ -54,7 +54,7 @@ endif;
 if ( ! function_exists( 'boke_1_custom_excerpt_length' ) ) :
 
 function boke_1_custom_excerpt_length( $length ) {
-    return '80';
+    return '70';
 }
 add_filter( 'excerpt_length', 'boke_1_custom_excerpt_length', 999 );
 
