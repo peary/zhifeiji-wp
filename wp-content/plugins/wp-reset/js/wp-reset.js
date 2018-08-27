@@ -63,6 +63,44 @@ jQuery(document).ready(function($) {
   }); // reset submit
 
 
+  // collapse / expand card
+  $('.card').on('click', '.toggle-card', function(e) {
+    e.preventDefault();
+
+    card = $(this).parents('.card').toggleClass('collapsed');
+    $('.dashicons', this).toggleClass('dashicons-arrow-up-alt2').toggleClass('dashicons-arrow-down-alt2');
+    $(this).blur();
+
+    cards = localStorage.getItem('wp-reset-cards');
+    if (cards == null) {
+      cards = new Object();
+    } else {
+      cards = JSON.parse(cards);
+    }
+
+    if (card.hasClass('collapsed')) {
+      cards[card.attr('id')] = 'collapsed';
+    } else {
+      cards[card.attr('id')] = 'expanded';
+    }
+    localStorage.setItem('wp-reset-cards', JSON.stringify(cards));
+
+    return false;
+  }); // toggle-card
+
+  
+  // init cards; collapse those that need collapsing
+  cards = localStorage.getItem('wp-reset-cards');
+  if (cards != null) {
+    cards = JSON.parse(cards);
+  }
+  $.each(cards, function(card_name, card_value) {
+    if (card_value == 'collapsed') {
+      $('a.toggle-card', '#' + card_name).trigger('click');
+    }
+  });
+
+  
   // dismiss notice / pointer
   $('.wpr-dismiss-notice').on('click', function(e) {
     notice_name = $(this).data('notice');
@@ -81,4 +119,3 @@ jQuery(document).ready(function($) {
     return false;
   }); // dismiss notice
 }); // onload
-  
