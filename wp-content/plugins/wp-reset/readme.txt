@@ -4,7 +4,7 @@ Contributors: WebFactory, wpreset
 Requires at least: 4.0
 Requires PHP: 5.2
 Tested up to: 4.9
-Stable tag: 1.20
+Stable tag: 1.25
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,11 +39,16 @@ Access WP Reset admin page via the "Tools" menu.
 * everything will be reset; see bullets above for details
 * site title, WordPress address, site address, site language, search engine visibility settings as well as the current user will be restored
 * you will be logged out, automatically logged in and taken to the admin dashboard
-* WP Reset plugin will be reactivated
+* WP Reset plugin will be reactivated if that option is chosen in the post-reset options
 
 #### WP-CLI support
 
-WP Reset comes with full WP-CLI support. Help on our WP-CLI commands is available via _wp help reset_. By default the commands have to be confirmed but you can use the `--yes` option to skip confirmation. Instead of the active user, the first user with admin privileges found in the database will be restored after reset. Please be careful when using WP Reset with WP-CLI - as with using the GUI there is no undo. 
+WP Reset comes with full WP-CLI support. Help on our WP-CLI commands is available via _wp help reset_. By default the commands have to be confirmed but you can use the `--yes` option to skip confirmation. Instead of the active user, the first user with admin privileges found in the database will be restored after reset. Please be careful when using WP Reset with WP-CLI - as with using the GUI there is no undo.
+
+#### Multisite (WP-MU) Support
+
+WP Reset has yet to be completely tested with multisite! Please be careful when using it with multisite enabled. We don't recommend to resetting the main site. Sub-sites should be OK. We're working on making WP Reset fully compatible with WP-MU. Till then please be careful. Thank you for understanding.
+
 
 == Installation ==
 
@@ -70,7 +75,16 @@ Or if needed, upload manually;
 
 == Changelog ==
 
-= 1.2 =
+= v1.25 =
+* 2018/07/31
+* code clean-up
+* post-reset options - reactivate plugin, themes & WP Reset
+* added WP-MU warning till we make WP Reset fully compatible with it
+* Tidy Repo notice
+* added option to collapse boxes
+* modified rating notice
+
+= v1.20 =
 * 2018/07/09
 * we hit 40k installations on 2018/06/26
 * WP-CLI support via "wp reset" command
@@ -80,13 +94,13 @@ Or if needed, upload manually;
 * code clean up
 * preparations for further development and new features
 
-= 1.1 =
+= v1.10 =
 * 2018/05/09
 * WebFactory took over development
 * numerous bug fixes and improvements
 * 30,000 installations; 199,000 downloads
 
-= 1.0 =
+= v1.0 =
 * 2016/05/16
 * Initial release
 

@@ -55,7 +55,7 @@
 					$author_uri = 'http://www.zhutibaba.com/';
 				?>
 
-				&copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('name'); ?></a> - WordPress 主题
+				&copy; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('name'); ?></a>
 
 			</div><!-- .site-info -->
 

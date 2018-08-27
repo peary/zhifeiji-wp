@@ -72,6 +72,25 @@
   animation:spin 1.5s linear infinite;
 }
 
+.tools_page_wp-reset .notice-error {
+  border-color: #dd3036;
+}
+
+.tools_page_wp-reset .toggle-card {
+  position: absolute;
+  right: 2em;
+  top: 2.2em;
+  text-decoration: none;
+}
+
+.tools_page_wp-reset .card {
+  padding: 1em 2em 1em 2em;
+}
+
+.tools_page_wp-reset .card.collapsed p, .tools_page_wp-reset .card.collapsed b, .tools_page_wp-reset .card.collapsed ul {
+  display: none;
+}
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
